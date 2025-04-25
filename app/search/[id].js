@@ -17,6 +17,7 @@ import { COLORS } from "../../constants/colors";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import NearbyJobsCard from "../../components/NearbyJobsCard";
 import axios from "axios";
+import { RAPID_API_KEY } from "@env";
 
 const JobSearch = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const JobSearch = () => {
         method: "GET",
         url: `https://jsearch.p.rapidapi.com/search`,
         headers: {
-          "x-rapidapi-key": process.env.RAPID_API_KEY,
+          "x-rapidapi-key": RAPID_API_KEY,
           "x-rapidapi-host": "jsearch.p.rapidapi.com",
         },
         params: {
