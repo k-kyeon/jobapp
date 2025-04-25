@@ -27,37 +27,37 @@ const tabs = ["About", "Qualifications", "Responsibilities"];
 const JobDetails = () => {
   // Allows us to get the specific ID of the job details page we're on
   const params = useLocalSearchParams();
-  // const { data, isLoading, error, refetch } = useFetch("job-details", {
-  //   job_id: params.id,
-  // });
-  const data = [
-    {
-      job_id: "12345",
-      job_country: "USA",
-      job_title: "Developer",
-      job_type: "Full-time",
-      employer_name: "Apple",
-      employer_logo: "https://loremflickr.com/200/200?random=1",
-    },
-    {
-      job_id: "22225",
-      job_country: "France",
-      job_title: "Web Developer",
-      job_type: "Full-time",
-      employer_name: "Google",
-      employer_logo: "https://loremflickr.com/200/200?random=1",
-    },
-    {
-      job_id: "33215",
-      job_country: "Pakistan",
-      job_title: "Front Web Developer",
-      job_type: "Full-time",
-      employer_name: "Udemy",
-      employer_logo: "https://loremflickr.com/200/200?random=1",
-    },
-  ];
-  const isLoading = false;
-  const error = false;
+  const { data, isLoading, error, refetch } = useFetch("job-details", {
+    job_id: params.id,
+  });
+  // const data = [
+  //   {
+  //     job_id: "12345",
+  //     job_country: "USA",
+  //     job_title: "Developer",
+  //     job_type: "Full-time",
+  //     employer_name: "Apple",
+  //     employer_logo: "https://loremflickr.com/200/200?random=1",
+  //   },
+  //   {
+  //     job_id: "22225",
+  //     job_country: "France",
+  //     job_title: "Web Developer",
+  //     job_type: "Full-time",
+  //     employer_name: "Google",
+  //     employer_logo: "https://loremflickr.com/200/200?random=1",
+  //   },
+  //   {
+  //     job_id: "33215",
+  //     job_country: "Pakistan",
+  //     job_title: "Front Web Developer",
+  //     job_type: "Full-time",
+  //     employer_name: "Udemy",
+  //     employer_logo: "https://loremflickr.com/200/200?random=1",
+  //   },
+  // ];
+  // const isLoading = false;
+  // const error = false;
 
   const router = useRouter();
 
